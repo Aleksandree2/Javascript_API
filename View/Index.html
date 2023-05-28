@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>Json Data</h1>
+   <pre><code id = "/json-data"></code></pre>
+   <script>
+    fetch('/json-data')
+    .then(response =>response.join())
+    .then (data=>{
+        const jsonData = JSON.stringify(data, null, 2);
+        document.getElementById('/json-data').textContent = jsonData;
+    })
+   </script>
+
+</body>
+</html>
